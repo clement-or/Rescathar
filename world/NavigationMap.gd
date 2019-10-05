@@ -135,6 +135,26 @@ func _set_path_end_position(value):
 	if path_start_position != value:
 		_recalculate_path()
 
+func generate_random_path(start_pos):
+	var cond = true
+	var i = 0
+	var rnd_index
+
+	while (cond):
+		randomize()
+		rnd_index = Vector2(randi()%int(map_size.x),randi()%int(map_size.y))
+		if rnd_index in obstacles:
+			cond = false
+
+	self.path_start_position = world_to_map(start_pos)
+	self.path_end_position = rnd_index
+	_recalculate_path()
+	var path_world = []
+	for point in _point_path:
+		var point_world = my_map_to_world(Vector2(point.x, point.y))
+		path_world.append(point_world)
+	return path_world
+
 func my_map_to_world(index):
 	var x = _half_cell_size.x + cell_size.x*index.x
 	var y = _half_cell_size.y + cell_size.y*index.y
