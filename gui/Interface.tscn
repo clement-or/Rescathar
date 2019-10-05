@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gui/Timmer.tscn" type="PackedScene" id=1]
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Timmer" parent="." instance=ExtResource( 1 )]
+margin_left = 30.2935
+margin_top = 30.6177
+margin_right = 130.294
+margin_bottom = 136.618

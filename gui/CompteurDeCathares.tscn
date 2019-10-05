@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -156.0
+margin_bottom = 41.0
