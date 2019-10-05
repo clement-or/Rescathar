@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://resources/Default_theme.tres" type="Theme" id=1]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_top = 42.0
+margin_right = 1024.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 300, 100 )
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TextureButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = -19.0
+margin_right = 101.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Jogar - Jouer"
+align = 1
+valign = 1
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_top = 146.0
+margin_right = 1024.0
+margin_bottom = 246.0
+rect_min_size = Vector2( 300, 100 )
+
+[node name="Label" type="Label" parent="TextureButton2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.5
+margin_top = -19.0
+margin_right = 144.5
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Marca - Score"
+align = 1
+valign = 1
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_top = 250.0
+margin_right = 1024.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 300, 100 )
+
+[node name="Label" type="Label" parent="TextureButton3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.0
+margin_top = -19.0
+margin_right = 137.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Causidas - Option"
+align = 1
+valign = 1
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_top = 354.0
+margin_right = 1024.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 300, 100 )
+
+[node name="Label" type="Label" parent="TextureButton4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -73.0
+margin_top = -19.0
+margin_right = 73.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Crèdit - Crédit"
+align = 1
+valign = 1
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+margin_top = 458.0
+margin_right = 1024.0
+margin_bottom = 558.0
+rect_min_size = Vector2( 300, 100 )
+
+[node name="Label" type="Label" parent="TextureButton5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.5
+margin_top = -19.0
+margin_right = 126.5
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Daissar - Quitter"
+align = 1
+valign = 1
