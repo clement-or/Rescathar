@@ -1,5 +1,7 @@
 extends "res://characters/Character.gd"
 
+var cathare_inventory = 0
+
 func _process(delta):
   move(delta)
 
@@ -26,3 +28,8 @@ func _input(event):
   if event.is_action_pressed("right") ||event.is_action_pressed("down") \
   || event.is_action_pressed("left") || event.is_action_pressed("up"):
     has_bumped = false
+
+func _on_Player_area_entered(area):
+  if cathare_inventory < 3 && area.is_type("Cathare"):
+    area.queue_free()
+    cathare_inventory += 1

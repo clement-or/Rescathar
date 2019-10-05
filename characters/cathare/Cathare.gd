@@ -31,3 +31,6 @@ func move(delta):
       path.remove(0)
       if path.size() == 0:
       	path = null
+
+func is_type(type): return type == "Cathare" or .is_type(type)
+func get_type(): return "Cathare"
