@@ -12,6 +12,7 @@ func _ready():
     navigation_map = get_node(navigation_map)
 
   path = navigation_map.generate_random_path(global_position)
+  pass
 
 func _process(delta):
   move(delta)
@@ -31,5 +32,5 @@ func move(delta):
       if path.size() == 0:
       	path = null
 
-func is_type(type): return type == "Cathare"
+func is_type(type): return type == "Cathare" or .is_type(type)
 func get_type(): return "Cathare"
