@@ -1,68 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/enemy/Enemy.gd" type="Script" id=2]
-[ext_resource path="res://characters/enemy/méchant Planche2.png" type="Texture" id=3]
-
-[sub_resource type="Animation" id=4]
-resource_name = "walk_bottom"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 2, 6 ]
-}
-
-[sub_resource type="Animation" id=1]
-resource_name = "walk_left"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 3, 7 ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "walk_right"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 0, 4 ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "walk_top"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 1, 5 ]
-}
+[ext_resource path="res://characters/enemy/enemy_sprite.png" type="Texture" id=3]
 
 [node name="Enemy" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -70,17 +10,13 @@ speed = 256
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 3 )
-vframes = 2
-hframes = 4
-frame = 6
-
-[node name="Anim" parent="Sprite" index="0"]
-anims/walk_bottom = SubResource( 4 )
-anims/walk_left = SubResource( 1 )
-anims/walk_right = SubResource( 2 )
-anims/walk_top = SubResource( 3 )
 
 [node name="FollowTimer" type="Timer" parent="." index="3"]
 wait_time = 0.5
+
+[node name="IATimer" type="Timer" parent="." index="4"]
+one_shot = true
 autostart = true
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
 [connection signal="timeout" from="FollowTimer" to="." method="_on_FollowTimer_timeout"]
+[connection signal="timeout" from="IATimer" to="." method="_on_IATimer_timeout"]
