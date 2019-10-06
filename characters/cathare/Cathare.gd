@@ -2,12 +2,17 @@ extends "res://characters/Character.gd"
 
 export(NodePath) var navigation_map
 export(NodePath) var default_target
+onready var female = preload("res://characters/cathare/female.png")
 
 var path
 var target
 
 
 func _ready():
+  randomize()
+  if bool(randi()%2):
+    $Sprite.texture = female
+    print("female")
   if navigation_map:
     navigation_map = get_node(navigation_map)
 

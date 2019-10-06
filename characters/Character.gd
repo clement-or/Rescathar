@@ -21,8 +21,6 @@ func _ready():
   	tilemap = get_node(tilemap)
   	tile_size = tilemap.cell_size.x
 
-  # Init player pos
-  global_position = global_position.snapped(Vector2(tile_size+0.5*tile_size, tile_size+0.5*tile_size))
   last_position = global_position
   target_position = global_position
 
@@ -66,8 +64,14 @@ func bump():
 func get_movedir():
   if direction != Vector2.ZERO:
     Raycast.cast_to = direction * tile_size / 2
-    update()
+    update_anim()
 
-func _draw():
-  var pos = Raycast.cast_to
-  draw_circle(pos, 5, Color(1,0,0))
+func update_anim():
+  if direction == Vector2(1,0):
+    $Sprite/Anim.play("walk_right")
+  if direction == Vector2(-1, 0):
+    $Sprite/Anim.play("walk_left")
+  if direction == Vector2(0, -1):
+    $Sprite/Anim.play("walk_up")
+  if direction == Vector2(0, 1):
+    $Sprite/Anim.play("walk_down")

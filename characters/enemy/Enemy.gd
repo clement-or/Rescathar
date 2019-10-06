@@ -48,6 +48,7 @@ func stop_following():
 
 func _on_FollowTimer_timeout():
   path = navigation_map.find_path(global_position, target.global_position)
+  main()
 
 
 func move(delta):
@@ -76,7 +77,7 @@ func main():
     return
 
   if !holds_cathare:
-    if player_in_range() && player_has_cathares():
+    if player_in_range():
       rnd = randi()%3
     else:
       rnd = randi()%2
@@ -110,7 +111,7 @@ func go_to_prison():
     move_to(prison.global_position)
 
 func wander():
-  path = navigation_map.generate_random_path(global_position)
+  yield(get_tree().create_timer(1.0), )
 
 
 ##

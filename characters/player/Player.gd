@@ -36,9 +36,10 @@ func _input(event):
     has_bumped = false
 
 func _on_Player_area_entered(area):
-  if cathare_inventory < 3 && area.is_type("Cathare"):
-    area.queue_free()
-    cathare_inventory += 1
+  if area.has_method("is_type"):
+    if cathare_inventory < 3 && area.is_type("Cathare"):
+      area.queue_free()
+      cathare_inventory += 1
   if area.is_in_group("saving_area"):
     save()
   if area.is_in_group("hiding_place"):
