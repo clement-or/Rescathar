@@ -6,6 +6,7 @@ signal score_changed
 
 var cathare_inventory = 0
 var score = 0 setget set_score
+var is_hidden = false
 
 func _process(delta):
   move(delta)
@@ -38,9 +39,14 @@ func _on_Player_area_entered(area):
   if cathare_inventory < 3 && area.is_type("Cathare"):
     area.queue_free()
     cathare_inventory += 1
-
   if area.is_in_group("saving_area"):
     save()
+  if area.is_in_group("hiding_place"):
+    is_hidden = true
+
+func _on_Player_area_exited(area):
+  if area.is_in_group("hiding_place"):
+    is_hidden = false
 
 func save():
   if cathare_inventory > 0:
