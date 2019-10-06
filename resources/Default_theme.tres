@@ -9,6 +9,8 @@ use_filter = true
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
 
 [resource]
 default_font = SubResource( 2 )
