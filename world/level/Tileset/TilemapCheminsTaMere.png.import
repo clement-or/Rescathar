@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/muraille+pont tile.png-ee5eab5aec25f2ca4041dc5f7ba95d96.stex"
+path="res://.import/TilemapCheminsTaMere.png-d2e79a5f7409214164d3e86789aad7b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/level/Tileset/muraille+pont tile.png"
-dest_files=[ "res://.import/muraille+pont tile.png-ee5eab5aec25f2ca4041dc5f7ba95d96.stex" ]
+source_file="res://world/level/Tileset/TilemapCheminsTaMere.png"
+dest_files=[ "res://.import/TilemapCheminsTaMere.png-d2e79a5f7409214164d3e86789aad7b8.stex" ]
 
 [params]
 
@@ -20,11 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-<<<<<<< HEAD
 flags/filter=true
-=======
-flags/filter=false
->>>>>>> Map1Final
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
