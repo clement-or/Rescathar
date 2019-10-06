@@ -83,8 +83,8 @@ func _recalculate_path():
 	clear_previous_path_drawing()
 	var start_point_index = calculate_point_index(path_start_position)
 	var end_point_index = calculate_point_index(path_end_position)
-	if astar_node.has_point(start_point_index) && astar_node.has_point(end_point_index):
-		_point_path = astar_node.get_point_path(start_point_index, end_point_index)
+
+	_point_path = astar_node.get_point_path(start_point_index, end_point_index)
 	# Redraw the lines and circles from the start to the end point
 
 
