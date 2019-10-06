@@ -19,7 +19,7 @@ func _ready():
   # Init tilemap
   if tilemap:
   	tilemap = get_node(tilemap)
-  	tile_size = max(tilemap.cell_size.x, tilemap.cell_size.y)
+  	tile_size = tilemap.cell_size.x
 
   # Init player pos
   global_position = global_position.snapped(Vector2(tile_size-tile_size/2, tile_size-tile_size/2))

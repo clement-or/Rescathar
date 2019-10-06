@@ -4,8 +4,4 @@
 
 [node name="TestWorld" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-current = true
-
 [node name="Level" parent="." instance=ExtResource( 1 )]

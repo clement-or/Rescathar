@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Porte qui s_ouvre.wav-177205a6b234ff5056a62be7e2081896.sample"
+
+[deps]
+
+source_file="res://resources/audio/Porte qui s_ouvre.wav"
+dest_files=[ "res://.import/Porte qui s_ouvre.wav-177205a6b234ff5056a62be7e2081896.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
