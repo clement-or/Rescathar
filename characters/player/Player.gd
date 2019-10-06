@@ -1,5 +1,8 @@
 extends "res://characters/Character.gd"
 
+var is_hidden = false
+var cathare_inventory = 0
+
 func _process(delta):
   move(delta)
 

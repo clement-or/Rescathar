@@ -11,8 +11,6 @@ func _ready():
   if navigation_map:
     navigation_map = get_node(navigation_map)
 
-  path = navigation_map.generate_random_path(global_position)
-
 func _process(delta):
   move(delta)
   update()
