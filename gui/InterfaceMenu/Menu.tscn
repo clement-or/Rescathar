@@ -7,7 +7,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" parent="." instance=ExtResource( 1 )]
-margin_left = -0.570557
-margin_top = 2.23947
-margin_right = -0.570557
-margin_bottom = 2.2395
+margin_left = -1.0
+margin_top = 200.0
+margin_right = -1.0
+margin_bottom = 3.0
