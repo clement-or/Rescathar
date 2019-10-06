@@ -7,10 +7,10 @@
 [ext_resource path="res://characters/enemy/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/cathare/Cathare.tscn" type="PackedScene" id=6]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 62 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 62, 62 )
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -146,7 +146,7 @@ editor/display_folded = true
 position = Vector2( 32, 384 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SavingArea"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="EnemyArea" type="Area2D" parent="." groups=[
 "prison",
@@ -155,7 +155,7 @@ position = Vector2( 1760, 928 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyArea"]
 position = Vector2( 32, 32 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="HidingPlaces" type="Node2D" parent="."]
 editor/display_folded = true
