@@ -6,7 +6,7 @@ func _ready():
   $Enemy.connect("cathare_list_requested", self, "give_cathare_list")
   emit_signal("is_ready")
 
-func give_cathare_list(obj):
+func _on_Enemy_cathare_list_requested(obj):
   var cathares = $Cathares.get_children()
   obj.cathare_list = cathares
 

@@ -19,6 +19,11 @@ config/name="Game Pratic 2019"
 run/main_scene="res://gui/InterfaceMenu/Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneChanger="*res://singletons/SceneChanger.gd"
+Audio="*res://singletons/Audio.gd"
+
 [display]
 
 window/size/width=610
