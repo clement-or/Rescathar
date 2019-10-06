@@ -1,6 +1,11 @@
 extends "res://characters/Character.gd"
 
+onready var audio = get_node("/root/Audio")
+
+signal score_changed
+
 var cathare_inventory = 0
+var score = 0 setget set_score
 
 func _process(delta):
   move(delta)
@@ -33,3 +38,16 @@ func _on_Player_area_entered(area):
   if cathare_inventory < 3 && area.is_type("Cathare"):
     area.queue_free()
     cathare_inventory += 1
+
+  if area.is_in_group("saving_area"):
+    save()
+
+func save():
+  if cathare_inventory > 0:
+    audio.play("Save")
+  score += cathare_inventory*100
+  cathare_inventory = 0
+
+func set_score(s):
+  score = s
+  emit_signal("score_changed", score)

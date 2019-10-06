@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Chouette Nuit.wav-f7e128f73d258731b5fa7e6c8aeaf7d7.sample"
+
+[deps]
+
+source_file="res://resources/audio/Chouette Nuit.wav"
+dest_files=[ "res://.import/Chouette Nuit.wav-f7e128f73d258731b5fa7e6c8aeaf7d7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
