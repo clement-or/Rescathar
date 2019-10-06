@@ -10,4 +10,3 @@ speed = 256
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 3 )
-[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
