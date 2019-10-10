@@ -16,13 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Pratic 2019"
-run/main_scene="res://gui/InterfaceMenu/Menu.tscn"
+run/main_scene="res://world/level/levels/World1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Audio="*res://singletons/Audio.tscn"
 SceneChanger="*res://singletons/SceneChanger.tscn"
+
+[debug]
+
+gdscript/warnings/enable=false
 
 [display]
 

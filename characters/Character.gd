@@ -64,14 +64,3 @@ func bump():
 func get_movedir():
   if direction != Vector2.ZERO:
     Raycast.cast_to = direction * tile_size / 2
-    update_anim()
-
-func update_anim():
-  if direction == Vector2(1,0):
-    $Sprite/Anim.play("walk_right")
-  if direction == Vector2(-1, 0):
-    $Sprite/Anim.play("walk_left")
-  if direction == Vector2(0, -1):
-    $Sprite/Anim.play("walk_up")
-  if direction == Vector2(0, 1):
-    $Sprite/Anim.play("walk_down")

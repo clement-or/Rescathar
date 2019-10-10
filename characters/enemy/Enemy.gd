@@ -27,7 +27,7 @@ func _ready():
 	if prison:
 		prison = get_node(prison)
 	
-	main()
+	start_following(player)
 
 
 func _process(delta):
@@ -57,17 +57,16 @@ func _on_FollowTimer_timeout():
 func move(delta):
 	if path:
 		target_position = path[0]
-
-	direction = (target_position - global_position).normalized()
-	global_position += direction * speed * delta
-
-	if global_position.distance_to(target_position) < 1:
-		global_position = target_position
-		
-	# Remove first path point
-	path.remove(0)
-	if path.size() == 0:
-		path = null
+		direction = (target_position - global_position).normalized()
+		global_position += direction * speed * delta
+	
+		if global_position.distance_to(target_position) < 1:
+			global_position = target_position
+			
+		# Remove first path point
+		path.remove(0)
+		if path.size() == 0:
+			path = null
 
 ##
 # Actions
@@ -81,9 +80,11 @@ func main():
 
 
 func follow_new_cathare():
-	get_cathare_list()
 	randomize()
-	var rnd = randi()%(cathare_list.size()-1)
+	var rnd = 0
+	if cathare_list.size() > 1:
+		rnd = randi()%(cathare_list.size()-1)
+		
 	start_following(cathare_list[rnd])
 
 func follow_player():
@@ -118,9 +119,6 @@ func player_has_cathares():
 ##
 # Signals funcs
 ##
-
-func get_cathare_list():
-	emit_signal("cathare_list_requested", self)
 
 func _on_Enemy_area_entered(area):
 	if area.has_method("is_type"):
